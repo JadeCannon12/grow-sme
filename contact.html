@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact • Grow‑SME</title>
+  <meta name="description" content="Affordable, practical support for UK SMEs.">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+
+      <div class="nav">
+        <div class="container row">
+          <a class="brand" href="/"><span class="brand-logo"></span><span>Grow‑SME</span></a>
+          <button class="burger" aria-label="Open menu">☰</button>
+          <nav class="menu">
+            <a href="/index.html" >Home</a>
+            <a href="/about.html" >About</a>
+            <a href="/services/index.html" >Services</a>
+            <a href="/resources.html" >Resources</a>
+            <a class="btn" href="/contact.html">Book a chat</a>
+          </nav>
+        </div>
+      </div>
+    
+
+  <section class="section container">
+    <h1>Book a chat</h1>
+    <p class="lede">Tell us a little about your business and what you need help with. We’ll reply within one working day.</p>
+    <form name="contact" method="post" data-netlify="true">
+      <input type="hidden" name="form-name" value="contact">
+      <div class="row">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label for="business">Business name</label>
+          <input id="business" name="business">
+        </div>
+        <div>
+          <label for="help">What do you need help with?</label>
+          <select id="help" name="help">
+            <option>Launch — website & SEO</option>
+            <option>Run — process & tenders</option>
+            <option>Grow — strategy & integrations</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label for="msg">Message</label>
+        <textarea id="msg" name="message" rows="6" placeholder="A few notes about your goals, budget or timeline..."></textarea>
+      </div>
+      <div class="cta">
+        <button class="btn" type="submit">Send</button>
+        <a class="btn-outline" href="mailto:hello@grow-sme.co.uk">Or email: hello@grow‑sme.co.uk</a>
+      </div>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="grid" style="grid-template-columns:2fr 1fr 1fr">
+        <div>
+          <div class="brand"><span class="brand-logo"></span><span>Grow‑SME</span></div>
+          <p class="small">Affordable, practical support for small businesses ready to launch, run and grow.</p>
+          <div class="kpis">
+            <div class="kpi">UK‑friendly</div>
+            <div class="kpi">Transparent pricing</div>
+            <div class="kpi">No‑jargon support</div>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="list">
+            <li><a href="/services/launch.html">Launch</a></li>
+            <li><a href="/services/run.html">Run</a></li>
+            <li><a href="/services/grow.html">Grow</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="list">
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/resources.html">Resources</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="div">
+      <p class="small">© <span id="y"></span> Grow‑SME Ltd. Built for UK SMEs. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="/assets/script.js"></script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body></html>

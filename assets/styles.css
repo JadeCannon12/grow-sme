@@ -1,0 +1,71 @@
+
+:root{
+  --ink:#0b1f2a;
+  --ocean:#0f4c81;
+  --sea:#1e8c7a;
+  --foam:#e6f4f1;
+  --mist:#f6f8fa;
+  --slate:#6b7b8a;
+  --white:#ffffff;
+  --accent:#00a3a3;
+  --shadow:0 10px 25px rgba(6,30,41,.15);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--ink);background:var(--mist);line-height:1.6}
+img{max-width:100%;display:block}
+a{color:var(--ocean);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 1rem}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--ocean),var(--sea));color:#fff;padding:.9rem 1.2rem;border-radius:.75rem;font-weight:600;box-shadow:var(--shadow)}
+.btn:hover{opacity:.95;text-decoration:none}
+.btn-outline{background:transparent;border:2px solid var(--ocean);color:var(--ocean);padding:.7rem 1rem;border-radius:.7rem;font-weight:600}
+.nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #e5eef3;z-index:20}
+.nav .row{display:flex;align-items:center;justify-content:space-between;padding:.75rem 0}
+.brand{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.2px}
+.brand-logo{width:34px;height:34px;border-radius:10px;background:conic-gradient(from 200deg,var(--ocean),var(--sea),var(--accent));box-shadow:var(--shadow)}
+.nav a{font-weight:600}
+.menu{display:flex;gap:1.1rem;align-items:center}
+.burger{display:none;cursor:pointer;border:0;background:transparent;font-size:1.4rem}
+@media (max-width:860px){
+  .menu{display:none;flex-direction:column;align-items:flex-start;padding:1rem 0}
+  .menu.open{display:flex}
+  .burger{display:block}
+}
+.hero{background:linear-gradient(180deg,var(--foam),#fff);padding:4rem 0 2.5rem;border-bottom:1px solid #e5eef3}
+.kicker{font-size:.9rem;color:var(--sea);font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+h1{font-size:clamp(2rem,4vw,3rem);line-height:1.15;margin:.4rem 0 1rem}
+.lede{font-size:1.1rem;color:#334b5a;max-width:60ch}
+.grid{display:grid;gap:1rem}
+.cards{grid-template-columns:repeat(3,1fr);margin:2rem 0}
+@media (max-width:900px){.cards{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #e6eef2;border-radius:16px;padding:1.1rem 1.1rem 1.2rem;box-shadow:var(--shadow)}
+.card h3{margin:.2rem 0 .4rem}
+.badge{display:inline-flex;align-items:center;gap:.4rem;background:var(--foam);color:var(--sea);border:1px solid #cfe9e4;border-radius:100px;padding:.25rem .6rem;font-size:.8rem;font-weight:700}
+.section{padding:2.6rem 0}
+.section.alt{background:linear-gradient(180deg,#fff,var(--mist))}
+.split{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center}
+@media (max-width:980px){.split{grid-template-columns:1fr}}
+.list{margin:.3rem 0 1rem;padding:0;list-style:none}
+.list li{margin:.45rem 0;padding-left:1.2rem;position:relative}
+.list li:before{content:"•";position:absolute;left:0;color:var(--sea);font-weight:900}
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media (max-width:900px){.testimonials{grid-template-columns:1fr}}
+.quote{background:#fff;border:1px solid #e6eef2;border-radius:16px;padding:1rem;box-shadow:var(--shadow);font-size:.98rem}
+.quote footer{margin-top:.6rem;color:var(--slate)}
+.footer{background:#061e29;color:#c9d5de;padding:2.5rem 0;margin-top:2rem}
+.footer a{color:#e6f4f1}
+hr.div{border:0;border-top:1px dashed #d8e6ec;margin:1.8rem 0}
+.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:1rem}
+@media (max-width:900px){.pricing{grid-template-columns:1fr}}
+.tier{background:#fff;border:1px solid #e6eef2;border-radius:16px;padding:1.2rem;box-shadow:var(--shadow)}
+.tier h3{margin:.2rem 0 .3rem}
+.small{font-size:.9rem;color:#445b68}
+.kpis{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.8rem}
+.kpi{background:var(--foam);padding:.5rem .7rem;border-radius:10px;border:1px solid #cfe9e4;font-weight:700;color:#0c5252}
+.cta{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1rem}
+input,select,textarea{width:100%;padding:.8rem;border:1px solid #d6e3ea;border-radius:.6rem;background:#fff}
+label{font-weight:700;font-size:.95rem}
+form .row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:900px){form .row{grid-template-columns:1fr}}
+.notice{background:#fff8e1;border:1px solid #ffe4a3;padding:.8rem;border-radius:.6rem}
