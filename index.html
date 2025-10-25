@@ -8,6 +8,46 @@
   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="/assets/styles.css">
+  /* Big CTA panel that doesn't get lost */
+.cta-panel{
+  display:grid;
+  grid-template-columns: 1fr auto;
+  gap:1rem 2rem;
+  align-items:center;
+  padding:1.25rem 1.5rem;
+  background:#ffffff;
+  border:1px solid #e1edf0;
+  border-radius:18px;
+  box-shadow:0 12px 28px rgba(6,30,41,.08);
+}
+.cta-title{ margin:0; }
+.cta-sub{ margin:.25rem 0 0; color:#476171 }
+
+.cta-links{ display:flex; gap:.75rem; flex-wrap:wrap }
+.btn-lg{ padding:1rem 1.25rem; font-size:1.05rem; border-radius:.9rem }
+
+.btn-outline-strong{
+  background:#fff;
+  border:2px solid var(--ocean);
+  color:var(--ocean);
+}
+.btn-outline-strong:hover{ text-decoration:none; filter:brightness(0.98) }
+
+.cta-row{ display:flex; gap:1.25rem; margin-top:.6rem; flex-wrap:wrap }
+.text-link{
+  font-weight:700;
+  color:var(--ocean);
+  text-decoration:none;
+  border-bottom:2px solid transparent;
+}
+.text-link:hover{ border-bottom-color:var(--ocean) }
+
+/* Mobile: stack the panel */
+@media (max-width:900px){
+  .cta-panel{ grid-template-columns:1fr; }
+  .cta-links{ justify-content:flex-start }
+}
+
 </head>
 <body>
 
@@ -38,28 +78,44 @@
     </div>
   </section>
 
-  <section class="section container">
-    <div class="grid cards">
-      <article class="card">
-        <span class="badge">Launch</span>
-        <h3>Get online fast</h3>
-        <p>Website packages, Google Business setup and a simple brand kit so you can start selling sooner.</p>
-        <a class="btn-outline" href="/services/launch.html">See Launch</a>
-      </article>
-      <article class="card">
-        <span class="badge">Run</span>
-        <h3>Work smarter</h3>
-        <p>Streamline daily tasks, automate admin and improve how you quote and win work.</p>
-        <a class="btn-outline" href="/services/run.html">See Run</a>
-      </article>
-      <article class="card">
-        <span class="badge">Grow</span>
-        <h3>Scale with confidence</h3>
-        <p>Strategy, integrations and change support to grow without chaos.</p>
-        <a class="btn-outline" href="/services/grow.html">See Grow</a>
-      </article>
+<!-- PICK YOUR PATH + NEEDS -->
+<section class="section alt" style="padding:3.5rem 0;background:linear-gradient(180deg,#f6f8fa,#e9f3f1)">
+  <div class="container">
+
+    <!-- Strong CTA panel -->
+    <div class="cta-panel">
+      <div>
+        <h2 class="cta-title">Pick your path</h2>
+        <p class="cta-sub">Choose the support you need now — you can always add more later.</p>
+      </div>
+      <div class="cta-links">
+        <a class="btn btn-lg" href="/services/launch.html" aria-label="Go to Launch services">Launch</a>
+        <a class="btn btn-lg btn-outline-strong" href="/services/run.html" aria-label="Go to Run services">Run</a>
+        <a class="btn btn-lg btn-outline-strong" href="/services/grow.html" aria-label="Go to Grow services">Grow</a>
+      </div>
     </div>
-  </section>
+
+    <!-- Needs list (kept concise) -->
+    <div class="split" style="margin-top:2rem;grid-template-columns:1fr;">
+      <div>
+        <h3>What small businesses ask for most</h3>
+        <ul class="list">
+          <li>Streamlined systems that save time and reduce admin</li>
+          <li>Clear pricing, proposals and tender support to win work</li>
+          <li>Reliable data and process control during growth</li>
+          <li>Websites & online tools that look professional and work properly</li>
+        </ul>
+        <div class="cta-row">
+          <a class="text-link" href="/services/launch.html">See Launch →</a>
+          <a class="text-link" href="/services/run.html">See Run →</a>
+          <a class="text-link" href="/services/grow.html">See Grow →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <section class="section alt" style="background:linear-gradient(180deg,#f6f8fa,#e9f3f1);padding:4rem 0;">
   <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
